@@ -4,7 +4,8 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            var flamethrower = new Attack("hej", ElementType.Fire, 32);
+            
         }
     }
 }
