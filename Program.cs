@@ -4,8 +4,11 @@
     {
         static void Main(string[] args)
         {
-            var flamethrower = new Attack("hej", ElementType.Fire, 32);
-            
+
+            //var flamethrower = new Attack("Flamethrower", ElementType.Fire, 12);
+            //var ember = new Attack("Ember", ElementType.Fire, 6);
+            Console.Read();
+
         }
     }
 }

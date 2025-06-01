@@ -1,25 +1,62 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Pokémon_Trainer_Simulator
+﻿namespace Pokémon_Trainer_Simulator
 {
     abstract class Pokemon
     {
-        public string Name { get; set; }
-        // Level
-        // Type
-        // Attack
+        private string _name;
+        private int _level;
+        public ElementType Type { get; set; }
+        public List<Attack> Attacks { get; private set; }
 
-        //abstract metod
-        public abstract string Attack();
+        public string Name
+        {
+            get { return _name; }
+            set
+            {
+                //name ska vara mellan 2- 15 characters
+                if (value.Length < 2 || _name.Length > 16)
+                {
+                    Console.WriteLine("Name must be between 2 - 15 characters long");
+                }
+                else
+                {
+                    _name = value;
+                }
+            }
+        }
 
-        //A non-overridable instance method:
-        //public void RaiseLevel()
-        //This should increment the level and print:
-        //{Name} leveled up to {Level}
+        public int Level
+        {
+            get { return _level; }
+            set
+            {
+                if (value > 1)
+                {
+                    _level = value;
+                }
+            }
+        }
+
+
+        //A List<Attack> field called Attacks, which should be passed in and set via the constructor. This list will represent the attacks that a Pokémon knows
+        protected Pokemon(List<Attack> Attacks)
+        {
+            this.Attacks = Attacks;
+        }
+
+        public void RandomAttack()
+        {
+            // Picks a random attack from the list of attacks and invokes its .Use-method.
+        }
+
+        public void Attack()
+        {
+            // Lets the user pick an attack from the list of attacks and invoke its .Use-method.
+        }
+
+        public void RaiseLevel()
+        {
+            // That should increment the level of the given pokemon and print that the pokemon has leveled up.
+        }
     }
 }
 
