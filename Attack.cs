@@ -9,6 +9,7 @@ namespace Pokémon_Trainer_Simulator
     internal class Attack
     {
 
+        //TODO: Ska dessa vara public?
         public string Name { get; set; }
         public ElementType Type { get; set; }
         public int BasePower { get; set; }
@@ -18,15 +19,11 @@ namespace Pokémon_Trainer_Simulator
             this.Name = Name;
             this.Type = Type;
             this.BasePower = BasePower;
-
         }
-        //Metod
-        // Return string: Flamethrower hits with total power 22!
-        // Where 22 is BasePower + level.
+
         public string Use(int level)
         {
-            return $"{Type} hits with total power {BasePower + level}";
+            return $"{Name} hits with total power {BasePower + level}";         
         }
-
     }
 }

@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace Pokémon_Trainer_Simulator
 {
-    internal class FirePokemon : Pokemon
+    internal interface IEvolvable
     {
-        public FirePokemon(List<Attack> Attacks) : base(Attacks)
-        {
-        }
+        void Evolve();
     }
 }
