@@ -16,7 +16,7 @@ namespace Pokémon_Trainer_Simulator.Pokemon.Fire
             Name = "Charmeleeon";
             Level += 10;
 
-            Console.WriteLine($"{oldname} is  evolving... Now it´s {Name}! Level {Level}" );
+            _ui.Print($"{oldname} is  evolving... Now it´s {Name}! Level {Level}" );
         }
     }
 }

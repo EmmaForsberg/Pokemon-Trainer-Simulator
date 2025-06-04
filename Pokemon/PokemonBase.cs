@@ -6,7 +6,7 @@ namespace Pokémon_Trainer_Simulator.Pokemon
     {
         private string _name;
         private int _level;
-        private IUI _ui;
+        protected IUI _ui;
         Random random = new Random();
         public ElementType Type { get; protected set; }
         public List<Attack> Attacks { get; private set; }

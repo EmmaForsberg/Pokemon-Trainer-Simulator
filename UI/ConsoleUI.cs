@@ -22,10 +22,5 @@ namespace Pokémon_Trainer_Simulator.UI
         {
             Console.WriteLine();
         }
-
-        public void PrintSingleLine(string word)
-        {
-            Console.Write(word);
-        }
     }
 }

@@ -8,8 +8,6 @@ namespace Pokémon_Trainer_Simulator
 {
     internal class Attack
     {
-
-        //TODO: Ska dessa vara public?
         public string Name { get; set; }
         public ElementType Type { get; set; }
         public int BasePower { get; set; }
