@@ -4,7 +4,7 @@ namespace Pokémon_Trainer_Simulator.Pokemon
 {
     abstract class PokemonBase
     {
-        private string _name;
+        private string _name = string.Empty;
         private int _level;
         protected IUI _ui;
         Random random = new Random();
@@ -39,10 +39,10 @@ namespace Pokémon_Trainer_Simulator.Pokemon
 
         protected PokemonBase(string name, int level, List<Attack> attacks, IUI ui)
         {
-            _name = name;
-            _level = level;
-            this.Attacks = attacks;
-            this._ui = ui;
+            Name = name;
+            Level = level;
+            Attacks = attacks;
+            _ui = ui;
         }
 
         public void RandomAttack()
